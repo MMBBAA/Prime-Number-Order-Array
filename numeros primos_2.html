@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>numeros primos 2</title>
+</head>
+<body>
+	<script>
+		function divisors(integer) {
+
+			var noPrime=0;
+			var contenedor=[];
+
+			for(var i=2;i<integer;i++){
+				if(integer%i==0){
+					contenedor.push(i);
+					noPrime++;
+				}
+			}
+			if(noPrime>0){
+				contenedor.sort(function (a, b){
+					return a - b;
+				})
+				return contenedor;
+			}
+			else{
+				return (integer+" is prime");	
+			}
+		}
+		
+		divisors(12);
+	</script>
+</body>
+</html>
